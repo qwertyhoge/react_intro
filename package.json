@@ -1,0 +1,28 @@
+{
+  "name": "react_intro",
+  "version": "1.0.0",
+  "description": "test project of react.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel-node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qwertyhoge/react_intro.git"
+  },
+  "keywords": [
+    "react.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qwertyhoge/react_intro/issues"
+  },
+  "homepage": "https://github.com/qwertyhoge/react_intro#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "express": "^4.16.4"
+  }
+}

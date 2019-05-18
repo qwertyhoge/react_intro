@@ -1,13 +1,22 @@
 import express from "express";
+import fs from "fs";
+import path from "path";
 
 const app = express();
 
-//GETリクエストでルートにアクセスが会った時の動作
+const public_path = path.resolve(process.cwd(), "public/");
+app.use(express.static(public_path));
+
 app.get('/', (req, res)=>{
-  res.send('Hello express');
+    const index = fs.readFileSync("./public/index.html", "utf-8");
+    res.send(index);
 });
 
-//3000番ポートを使ってサーバーを立ち上げ
 app.listen(3000, ()=>{
-  console.log('app listening on 3000');
+  console.log('App listening on 3000');
+  /*
+  console.log(path.resolve(process.cwd()));
+  console.log(path.resolve(__dirname));
+  console.log(path.resolve("/"));
+  */
 });
